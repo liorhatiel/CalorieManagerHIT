@@ -1,0 +1,171 @@
+/* ******************************* */
+/* GENERAL */
+/* ******************************* */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* ******************************* */
+/* HEADING */
+/* ******************************* */
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.nav-bar-btns a:link,
+.nav-bar-btns a:visited {
+  display: inline-block;
+  color: #999;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: white;
+  padding: 12px;
+  border-radius: 50px;
+}
+
+.nav-bar-btns a:hover,
+.nav-bar-btns a:active {
+  display: inline-block;
+  border: 1px solid #333;
+  color: #333;
+}
+
+.active {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  color: white !important;
+}
+
+/* ******************************* */
+/* APP CONTAINER */
+/* ******************************* */
+
+.app-container {
+  background-color: white;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#calorie-report-window {
+  display: none;
+}
+
+/* ******************************* */
+/* ADD ITEM WINDOW */
+/* ******************************* */
+
+.add-item-heading {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.form-group select,
+.form-group input {
+  padding: 10px;
+  border-radius: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.add-item-submit-btn {
+  padding: 15px;
+  background-color: #ff585f;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.add-item-submit-btn:hover {
+  transition: all 0.3s;
+  background-color: #e52a5a;
+}
+
+/* ******************************* */
+/* CALORIE REPORT WINDOW */
+/* ******************************* */
+
+.calorie-report-heading {
+  margin-bottom: 20px;
+}
+
+.year-and-month-heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.select-input {
+  padding: 10px;
+  border-radius: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.table th {
+  font-size: 18px;
+}
+
+/* ******************************* */
+/* USER FEEDBACK */
+/* ******************************* */
+
+.show {
+  display: block !important;
+}
+
+.user-feedback {
+  display: none;
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 15px;
+  max-width: 100%;
+  margin: 30px auto 0 auto;
+}
+
+.add-item-submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
