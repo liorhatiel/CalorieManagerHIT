@@ -10,12 +10,13 @@
     <nav class="nav-bar">
       <h2>Logo png</h2>
       <div class="nav-bar-btns">
-        <a href="#" class="btn-add-item active">Add Item </a>
-        <a href="#" class="btn-show-report">Calorie Report</a>
+        <a href="#" class="btn-add-item active" id="btn-add-item">Add Item</a>
+        <a href="#" class="btn-show-report" id="btn-show-report">Calorie Report</a>
       </div>
     </nav>
+
     <div class="app-container">
-      <!-- <h1>This is heading</h1> -->
+      <!-- Add New Item Section -->
       <div id="add-item-window">
         <h1 class="add-item-heading">Add New Item</h1>
         <form id="calorieForm">
@@ -36,6 +37,7 @@
               id="description"
               name="description"
               placeholder="What did you eat?"
+              required
             />
           </div>
 
@@ -46,19 +48,17 @@
               id="calories"
               name="calories"
               placeholder="How many calories?"
+              required
             />
           </div>
 
-          <!-- <a class="add-item-submit-btn">Create Item</a> -->
-          <button class="add-item-submit-btn">Create Item</button>
-
-          <div class="user-feedback">
-            <p>Calorie item added successfully!</p>
-          </div>
+          <button type="submit" class="add-item-submit-btn">Create Item</button>
+          <div class="user-feedback" id="user-feedback"></div>
         </form>
       </div>
 
-      <div id="calorie-report-window">
+      <!-- Calorie Report Section -->
+      <div id="calorie-report-window" style="display: none;">
         <h1 class="calorie-report-heading">Calorie Report</h1>
         <div class="year-and-month-heading">
           <div class="me-2">
@@ -91,41 +91,24 @@
             </select>
           </div>
         </div>
-        <!-- The table itself -->
+
+        <!-- The table for calorie report -->
         <table class="table">
           <thead>
             <tr>
               <th>Category</th>
-              <th>Calorie</th>
+              <th>Calories</th>
               <th>Description</th>
               <th>Date</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>BREAKFAST</td>
-              <td>300</td>
-              <td>Oatmeal with fruit</td>
-              <td>2024-09-11</td>
-            </tr>
-
-            <tr>
-              <td>DINNER</td>
-              <td>1700</td>
-              <td>Pizza with olives and onions</td>
-              <td>2024-09-11</td>
-            </tr>
-            <!-- <tr>
-              <td>DINNER</td>
-              <td>1700</td>
-              <td>Pizza with olives and onion</td>
-              <td>2024-09-11</td>
-            </tr> -->
-          </tbody>
+          <tbody id="calorie-report-body"></tbody>
         </table>
       </div>
     </div>
 
+    <script src="idb.js"></script>
     <script src="script.js"></script>
+   
   </body>
 </html>
