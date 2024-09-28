@@ -1,3 +1,7 @@
+// Ido Mashiah 208388884
+// Esti Rabino 206080954
+// Lior Hatuel 314673583
+
 
 document.addEventListener("DOMContentLoaded", async () => {
   const addItemWindow = document.getElementById("add-item-window");
